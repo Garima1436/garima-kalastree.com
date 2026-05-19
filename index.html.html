@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="KalaStree — PhD research on women artisans in India's GI-tagged sectors. FinTech empowerment, traditional heritage, IIT Patna. Garima Awasthi."/>
+<meta name="keywords" content="GI products India, women empowerment, FinTech, Geographical Indication, IIT Patna, Garima Awasthi, handicrafts, tribal art, women artisans"/>
+<title>KalaStree — Heritage by Her | Garima Awasthi, IIT Patna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --saffron:#C94B1A;
+  --saffron-light:#F5E8E0;
+  --saffron-dark:#8B3010;
+  --gold:#B8860B;
+  --gold-light:#F9F0D0;
+  --forest:#3B5A2F;
+  --forest-light:#E8F0E4;
+  --parchment:#FDF6E3;
+  --parchment-dark:#F2E8D5;
+  --navy:#1B2E4A;
+  --navy-light:#E8ECF2;
+  --mauve:#7A3B52;
+  --mauve-light:#F5EBF0;
+  --cream:#FFFEF9;
+  --text:#1A1A1A;
+  --text-muted:#5C5542;
+  --border:#D9C9A8;
+  --shadow:rgba(26,10,0,0.12);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+
+body{
+  font-family:'Lato',sans-serif;
+  background:var(--parchment);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+/* ── FOLK TEXTURE OVERLAY ─────────────────────────────── */
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(201,75,26,0.04) 0%, transparent 40%),
+    radial-gradient(circle at 85% 70%, rgba(59,90,47,0.04) 0%, transparent 40%);
+  pointer-events:none;
+  z-index:0;
+}
+
+/* ── FOLK PATTERN TOP BAND ────────────────────────────── */
+.folk-top-band{
+  width:100%;
+  height:12px;
+  background:linear-gradient(90deg,
+    var(--saffron) 0%, var(--gold) 25%,
+    var(--forest) 50%, var(--mauve) 75%, var(--saffron) 100%);
+  position:relative;
+  overflow:hidden;
+}
+.folk-top-band::after{
+  content:'◆ ◇ ◆ ◇ ◆ ◇ ◆ ◇ ◆ ◇ ◆ ◇ ◆ ◇ ◆ ◇ ◆ ◇ ◆ ◇ ◆ ◇ ◆ ◇ ◆ ◇ ◆ ◇ ◆ ◇ ◆ ◇ ◆ ◇ ◆ ◇ ◆ ◇ ◆ ◇ ◆';
+  position:absolute;
+  top:50%;transform:translateY(-50%);
+  left:0;white-space:nowrap;
+  font-size:6px;color:rgba(255,255,255,0.5);
+  letter-spacing:8px;
+  animation:scrollTicker 30s linear infinite;
+}
+
+/* ── NAVIGATION ───────────────────────────────────────── */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(253,246,227,0.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1.5px solid var(--border);
+  padding:0 5%;
+}
+.nav-inner{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  height:64px;
+}
+.nav-logo{
+  font-family:'EB Garamond',serif;
+  font-size:1.6rem;font-weight:700;
+  color:var(--saffron);
+  text-decoration:none;
+  letter-spacing:-0.5px;
+}
+.nav-logo span{color:var(--gold);font-style:italic;}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center;}
+.nav-links a{
+  font-family:'Lato',sans-serif;font-size:0.875rem;
+  font-weight:700;letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--text-muted);text-decoration:none;
+  transition:color 0.2s;padding:4px 0;
+  border-bottom:2px solid transparent;
+}
+.nav-links a:hover{color:var(--saffron);border-bottom-color:var(--saffron);}
+.nav-cta{
+  background:var(--saffron);color:#fff!important;
+  padding:8px 20px!important;border-radius:4px;
+  border-bottom:none!important;
+  transition:background 0.2s!important;
+}
+.nav-cta:hover{background:var(--saffron-dark)!important;}
+
+/* ── TICKER ───────────────────────────────────────────── */
+.ticker-bar{
+  background:var(--navy);
+  padding:8px 0;overflow:hidden;
+  border-bottom:2px solid var(--gold);
+}
+.ticker-inner{
+  display:flex;gap:0;white-space:nowrap;
+  animation:scrollTicker 35s linear infinite;
+}
+.ticker-inner span{
+  font-family:'Lato',sans-serif;font-size:0.75rem;
+  font-weight:700;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--gold);padding:0 2rem;
+}
+.ticker-inner .dot{color:var(--saffron);padding:0 0.5rem;}
+@keyframes scrollTicker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── HERO ─────────────────────────────────────────────── */
+.hero{
+  position:relative;
+  min-height:92vh;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  padding:0 5%;
+  overflow:hidden;
+}
+.hero-bg-art{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 50%, rgba(59,90,47,0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 80% at 20% 60%, rgba(201,75,26,0.07) 0%, transparent 60%);
+}
+/* Warli-style decorative pattern top-right */
+.hero-pattern{
+  position:absolute;top:0;right:0;
+  width:55%;height:100%;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23B8860B' stroke-width='0.5' opacity='0.18'%3E%3Ccircle cx='30' cy='30' r='12'/%3E%3Ccircle cx='30' cy='30' r='6'/%3E%3Cline x1='30' y1='0' x2='30' y2='60'/%3E%3Cline x1='0' y1='30' x2='60' y2='30'/%3E%3Cline x1='0' y1='0' x2='60' y2='60'/%3E%3Cline x1='60' y1='0' x2='0' y2='60'/%3E%3Cpolygon points='30,8 36,22 52,22 40,32 45,46 30,38 15,46 20,32 8,22 24,22' stroke='%23C94B1A' stroke-width='0.4'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events:none;opacity:0.7;
+}
+.hero-left{
+  position:relative;z-index:2;
+  max-width:580px;padding:6rem 0 4rem;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--forest-light);
+  border:1px solid var(--forest);
+  border-radius:30px;
+  padding:6px 16px;
+  font-size:0.75rem;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--forest);
+  margin-bottom:1.5rem;
+}
+.badge-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--forest);
+  animation:pulseDot 2s ease-in-out infinite;
+}
+@keyframes pulseDot{
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:0.5;transform:scale(1.4)}
+}
+.hero-title{
+  font-family:'EB Garamond',serif;
+  font-size:clamp(2.8rem,5vw,4.2rem);
+  font-weight:700;line-height:1.1;
+  color:var(--saffron);
+  margin-bottom:0.4rem;
+}
+.hero-title-sub{
+  font-family:'EB Garamond',serif;
+  font-size:clamp(1.1rem,2vw,1.5rem);
+  font-style:italic;color:var(--gold);
+  margin-bottom:1.5rem;
+}
+.hero-desc{
+  font-size:1.05rem;line-height:1.8;
+  color:var(--text-muted);
+  max-width:500px;margin-bottom:2rem;
+}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn-primary{
+  background:var(--saffron);color:#fff;
+  padding:14px 30px;border-radius:5px;
+  font-family:'Lato',sans-serif;font-size:0.9rem;
+  font-weight:700;letter-spacing:0.05em;
+  text-decoration:none;border:2px solid var(--saffron);
+  transition:all 0.25s;cursor:pointer;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.btn-primary:hover{background:var(--saffron-dark);border-color:var(--saffron-dark);transform:translateY(-2px);}
+.btn-outline{
+  background:transparent;color:var(--saffron);
+  padding:14px 30px;border-radius:5px;
+  font-family:'Lato',sans-serif;font-size:0.9rem;
+  font-weight:700;letter-spacing:0.05em;
+  text-decoration:none;border:2px solid var(--saffron);
+  transition:all 0.25s;cursor:pointer;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.btn-outline:hover{background:var(--saffron-light);transform:translateY(-2px);}
+.hero-stats{
+  display:flex;gap:2.5rem;margin-top:3rem;
+  padding-top:2rem;
+  border-top:1.5px solid var(--border);
+}
+.stat-item{text-align:left;}
+.stat-num{
+  font-family:'EB Garamond',serif;
+  font-size:2rem;font-weight:700;
+  color:var(--saffron);line-height:1;
+}
+.stat-lbl{
+  font-size:0.75rem;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--text-muted);margin-top:4px;
+}
+
+/* Hero right — Warli Illustration */
+.hero-right{
+  position:relative;z-index:2;
+  display:flex;justify-content:center;align-items:center;
+  padding:4rem 0;
+}
+.warli-frame{
+  width:420px;height:420px;
+  border-radius:50% 40% 55% 45% / 45% 55% 40% 50%;
+  background:var(--parchment-dark);
+  border:3px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+  animation:floatFrame 6s ease-in-out infinite;
+}
+@keyframes floatFrame{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-12px)}
+}
+.warli-frame::before{
+  content:'';position:absolute;inset:-16px;
+  border-radius:50% 40% 55% 45% / 45% 55% 40% 50%;
+  border:1.5px dashed var(--gold);opacity:0.4;
+}
+.warli-frame::after{
+  content:'';position:absolute;inset:-32px;
+  border-radius:50%;
+  border:1px dashed var(--saffron);opacity:0.2;
+}
+
+/* ── FOLK DIVIDER ─────────────────────────────────────── */
+.folk-divider{
+  width:100%;text-align:center;
+  padding:1rem 0;overflow:hidden;
+  color:var(--gold);font-size:1rem;
+  letter-spacing:12px;opacity:0.6;
+}
+.section-fold{
+  position:relative;padding:5rem 5%;
+}
+.section-inner{max-width:1200px;margin:0 auto;}
+
+/* ── SECTION HEADINGS ─────────────────────────────────── */
+.sec-eyebrow{
+  font-size:0.72rem;font-weight:700;
+  letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--forest);margin-bottom:0.6rem;
+}
+.sec-title{
+  font-family:'EB Garamond',serif;
+  font-size:clamp(2rem,3.5vw,2.8rem);
+  font-weight:700;color:var(--navy);
+  line-height:1.2;margin-bottom:1rem;
+}
+.sec-title span{color:var(--saffron);}
+.sec-body{
+  font-size:1.05rem;line-height:1.85;
+  color:var(--text-muted);max-width:680px;
+}
+.sec-ornament{
+  display:flex;align-items:center;gap:12px;
+  margin-bottom:3rem;
+}
+.sec-ornament::before,.sec-ornament::after{
+  content:'';flex:1;height:1.5px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+.sec-ornament-inner{
+  font-size:1.2rem;color:var(--gold);
+  letter-spacing:8px;
+}
+
+/* ── ABOUT SECTION ────────────────────────────────────── */
+.about-grid{
+  display:grid;grid-template-columns:1fr 1.5fr;
+  gap:5rem;align-items:center;
+}
+.about-photo-wrap{position:relative;}
+.about-photo-bg{
+  width:100%;aspect-ratio:4/5;
+  background:var(--parchment-dark);
+  border-radius:12px 50% 12px 50%;
+  border:2.5px solid var(--gold);
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.about-photo-bg::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='2' fill='%23B8860B' opacity='0.15'/%3E%3Ccircle cx='0' cy='0' r='2' fill='%23B8860B' opacity='0.1'/%3E%3Ccircle cx='40' cy='40' r='2' fill='%23B8860B' opacity='0.1'/%3E%3C/svg%3E");
+}
+.about-photo-placeholder{
+  font-family:'EB Garamond',serif;
+  font-size:1rem;color:var(--gold);
+  text-align:center;z-index:1;padding:1rem;
+  font-style:italic;
+}
+.about-photo-wrap .accent-tag{
+  position:absolute;bottom:-16px;right:-16px;
+  background:var(--saffron);color:#fff;
+  padding:12px 18px;border-radius:8px;
+  font-size:0.78rem;font-weight:700;
+  letter-spacing:0.06em;text-transform:uppercase;
+  box-shadow:0 4px 16px rgba(201,75,26,0.25);
+}
+.about-content .lead{
+  font-family:'EB Garamond',serif;
+  font-size:1.35rem;line-height:1.7;
+  color:var(--navy);margin-bottom:1.5rem;
+  font-style:italic;
+}
+.about-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.5rem;}
+.tag{
+  background:var(--parchment-dark);
+  border:1px solid var(--border);
+  padding:6px 14px;border-radius:30px;
+  font-size:0.78rem;font-weight:700;
+  letter-spacing:0.06em;text-transform:uppercase;
+  color:var(--text-muted);
+}
+.tag.tag-saffron{background:var(--saffron-light);border-color:var(--saffron);color:var(--saffron);}
+.tag.tag-forest{background:var(--forest-light);border-color:var(--forest);color:var(--forest);}
+.tag.tag-gold{background:var(--gold-light);border-color:var(--gold);color:var(--gold);}
+
+/* ── RESEARCH SECTION ─────────────────────────────────── */
+.research-bg{background:var(--navy);position:relative;overflow:hidden;}
+.research-bg::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23B8860B' stroke-width='0.4' opacity='0.1'%3E%3Crect x='10' y='10' width='60' height='60' rx='2'/%3E%3Crect x='20' y='20' width='40' height='40' rx='1'/%3E%3Cline x1='40' y1='0' x2='40' y2='80'/%3E%3Cline x1='0' y1='40' x2='80' y2='40'/%3E%3C/g%3E%3C/svg%3E");
+}
+.research-bg .sec-title{color:#fff;}
+.research-bg .sec-body{color:rgba(255,255,255,0.75);}
+.research-bg .sec-eyebrow{color:var(--gold);}
+.research-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.5rem;margin-top:3rem;
+}
+.r-card{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(184,134,11,0.3);
+  border-radius:12px;padding:2rem;
+  position:relative;overflow:hidden;
+  transition:transform 0.3s,border-color 0.3s;
+}
+.r-card:hover{transform:translateY(-4px);border-color:var(--gold);}
+.r-card::before{
+  content:'';position:absolute;top:0;left:0;
+  width:100%;height:4px;
+  background:linear-gradient(90deg,var(--saffron),var(--gold));
+}
+.r-card-icon{
+  font-size:2rem;margin-bottom:1rem;
+}
+.r-card-title{
+  font-family:'EB Garamond',serif;
+  font-size:1.3rem;font-weight:600;
+  color:#fff;margin-bottom:0.75rem;
+}
+.r-card-body{
+  font-size:0.9rem;line-height:1.75;
+  color:rgba(255,255,255,0.7);
+}
+.r-card-stat{
+  margin-top:1.5rem;padding-top:1.5rem;
+  border-top:1px solid rgba(184,134,11,0.2);
+  display:flex;align-items:baseline;gap:8px;
+}
+.r-card-stat-num{
+  font-family:'EB Garamond',serif;
+  font-size:2rem;font-weight:700;color:var(--gold);
+}
+.r-card-stat-label{
+  font-size:0.75rem;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:rgba(255,255,255,0.5);
+}
+
+/* ── GI PRODUCTS GALLERY ──────────────────────────────── */
+.gallery-bg{background:var(--parchment-dark);}
+.gi-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:1.25rem;margin-top:3rem;
+}
+.gi-card{
+  background:var(--cream);
+  border:1.5px solid var(--border);
+  border-radius:10px;
+  overflow:hidden;
+  transition:transform 0.3s,box-shadow 0.3s;
+  cursor:default;
+}
+.gi-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 16px 40px rgba(201,75,26,0.12);
+  border-color:var(--saffron);
+}
+.gi-card-img{
+  height:140px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:3rem;
+  position:relative;overflow:hidden;
+}
+.gi-card-info{padding:1rem 1.1rem 1.2rem;}
+.gi-card-name{
+  font-family:'EB Garamond',serif;
+  font-size:1.05rem;font-weight:600;
+  color:var(--navy);margin-bottom:4px;
+}
+.gi-card-state{
+  font-size:0.75rem;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--text-muted);
+}
+.gi-card-badges{
+  display:flex;gap:6px;margin-top:8px;flex-wrap:wrap;
+}
+.gi-badge{
+  font-size:0.65rem;font-weight:700;
+  letter-spacing:0.06em;text-transform:uppercase;
+  padding:3px 9px;border-radius:20px;
+}
+.gb-agri{background:var(--forest-light);color:var(--forest);}
+.gb-textile{background:var(--navy-light);color:var(--navy);}
+.gb-handi{background:var(--saffron-light);color:var(--saffron);}
+.gb-food{background:var(--mauve-light);color:var(--mauve);}
+.gi-card-year{
+  font-size:0.72rem;color:var(--gold);
+  font-weight:700;margin-top:6px;
+}
+
+/* ── MAP / STATS SECTION ──────────────────────────────── */
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:1.5rem;margin-top:3rem;
+}
+.stat-card{
+  background:var(--cream);
+  border:1.5px solid var(--border);
+  border-radius:10px;
+  padding:1.75rem 1.5rem;
+  text-align:center;
+  transition:transform 0.25s;
+  position:relative;overflow:hidden;
+}
+.stat-card::before{
+  content:'';position:absolute;bottom:0;left:0;right:0;
+  height:4px;background:var(--clr, var(--saffron));
+}
+.stat-card:hover{transform:translateY(-4px);}
+.stat-card-num{
+  font-family:'EB Garamond',serif;
+  font-size:2.8rem;font-weight:700;
+  color:var(--clr, var(--saffron));
+  line-height:1;margin-bottom:8px;
+}
+.stat-card-label{
+  font-size:0.8rem;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--text-muted);
+}
+.stat-card-sub{
+  font-size:0.78rem;color:var(--text-muted);
+  margin-top:6px;line-height:1.5;
+}
+
+/* ── CHATBOT SECTION ──────────────────────────────────── */
+.chatbot-bg{background:var(--saffron-light);position:relative;overflow:hidden;}
+.chatbot-bg::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cg stroke='%23C94B1A' stroke-width='0.5' opacity='0.08' fill='none'%3E%3Cpolygon points='50,5 95,27 95,73 50,95 5,73 5,27'/%3E%3Cpolygon points='50,15 85,32 85,68 50,85 15,68 15,32'/%3E%3Ccircle cx='50' cy='50' r='25'/%3E%3C/g%3E%3C/svg%3E");
+}
+.chatbot-inner{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:4rem;align-items:center;
+  position:relative;z-index:1;
+}
+.chatbot-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--navy);color:var(--gold);
+  padding:6px 16px;border-radius:30px;
+  font-size:0.72rem;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;
+  margin-bottom:1.2rem;
+}
+.chatbot-pulse{
+  width:8px;height:8px;border-radius:50%;
+  background:#4CAF50;
+  animation:pulseDot 1.5s ease-in-out infinite;
+}
+.chatbot-title{
+  font-family:'EB Garamond',serif;
+  font-size:2.4rem;font-weight:700;
+  color:var(--navy);line-height:1.2;
+  margin-bottom:1rem;
+}
+.chatbot-desc{
+  font-size:1rem;line-height:1.8;
+  color:var(--text-muted);margin-bottom:1.5rem;
+}
+.chatbot-demo{
+  background:var(--navy);
+  border-radius:12px;padding:1.5rem;
+  position:relative;
+}
+.chatbot-demo-header{
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:1.2rem;padding-bottom:1rem;
+  border-bottom:1px solid rgba(184,134,11,0.2);
+}
+.chatbot-demo-avatar{
+  width:36px;height:36px;border-radius:50%;
+  background:linear-gradient(135deg,var(--saffron),var(--gold));
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;
+}
+.chatbot-demo-name{
+  font-size:0.85rem;font-weight:700;color:#fff;
+}
+.chatbot-demo-status{
+  font-size:0.7rem;color:#4CAF50;
+  font-weight:700;letter-spacing:0.06em;
+}
+.chat-bubble{
+  border-radius:10px;padding:10px 14px;
+  margin-bottom:10px;font-size:0.85rem;line-height:1.6;
+  max-width:90%;
+}
+.chat-user{
+  background:var(--saffron);color:#fff;
+  margin-left:auto;border-radius:10px 10px 2px 10px;
+}
+.chat-bot{
+  background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.9);
+  border:1px solid rgba(184,134,11,0.2);
+  border-radius:10px 10px 10px 2px;
+}
+.chat-typing{
+  display:flex;gap:4px;align-items:center;
+  padding:10px 14px;
+}
+.typing-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--gold);
+  animation:typingBounce 1.4s ease-in-out infinite;
+}
+.typing-dot:nth-child(2){animation-delay:0.2s;}
+.typing-dot:nth-child(3){animation-delay:0.4s;}
+@keyframes typingBounce{
+  0%,60%,100%{transform:translateY(0)}
+  30%{transform:translateY(-8px)}
+}
+
+/* ── PUBLICATIONS SECTION ─────────────────────────────── */
+.pub-list{margin-top:2.5rem;display:flex;flex-direction:column;gap:1.25rem;}
+.pub-item{
+  background:var(--cream);
+  border:1.5px solid var(--border);
+  border-left:4px solid var(--saffron);
+  border-radius:0 10px 10px 0;
+  padding:1.5rem 1.75rem;
+  transition:transform 0.25s,border-left-color 0.25s;
+}
+.pub-item:hover{transform:translateX(4px);border-left-color:var(--gold);}
+.pub-venue{
+  display:inline-block;
+  background:var(--navy);color:var(--gold);
+  font-size:0.68rem;font-weight:700;
+  letter-spacing:0.12em;text-transform:uppercase;
+  padding:3px 10px;border-radius:3px;
+  margin-bottom:8px;
+}
+.pub-title{
+  font-family:'EB Garamond',serif;
+  font-size:1.15rem;font-weight:600;
+  color:var(--navy);margin-bottom:6px;line-height:1.4;
+}
+.pub-meta{
+  font-size:0.8rem;color:var(--text-muted);
+  line-height:1.6;
+}
+
+/* ── CONTACT SECTION ──────────────────────────────────── */
+.contact-bg{background:var(--navy);position:relative;overflow:hidden;}
+.contact-bg::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cg fill='%23B8860B' opacity='0.06'%3E%3Ccircle cx='10' cy='10' r='3'/%3E%3Ccircle cx='30' cy='10' r='3'/%3E%3Ccircle cx='50' cy='10' r='3'/%3E%3Ccircle cx='10' cy='30' r='3'/%3E%3Ccircle cx='30' cy='30' r='3'/%3E%3Ccircle cx='50' cy='30' r='3'/%3E%3Ccircle cx='10' cy='50' r='3'/%3E%3Ccircle cx='30' cy='50' r='3'/%3E%3Ccircle cx='50' cy='50' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+.contact-bg .sec-title{color:#fff;}
+.contact-bg .sec-eyebrow{color:var(--gold);}
+.contact-inner{
+  display:grid;grid-template-columns:1fr 1.2fr;
+  gap:5rem;align-items:start;
+  position:relative;z-index:1;
+}
+.contact-info-item{
+  display:flex;gap:16px;align-items:flex-start;
+  margin-bottom:1.75rem;
+}
+.contact-icon{
+  width:44px;height:44px;border-radius:8px;
+  background:rgba(184,134,11,0.15);
+  border:1px solid rgba(184,134,11,0.3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;flex-shrink:0;
+}
+.contact-info-label{
+  font-size:0.72rem;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:rgba(255,255,255,0.5);margin-bottom:4px;
+}
+.contact-info-value{
+  font-size:0.95rem;color:#fff;font-weight:400;
+}
+.contact-info-value a{color:var(--gold);text-decoration:none;}
+.contact-info-value a:hover{text-decoration:underline;}
+.contact-form{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(184,134,11,0.25);
+  border-radius:12px;padding:2.5rem;
+}
+.form-group{margin-bottom:1.25rem;}
+.form-label{
+  display:block;
+  font-size:0.75rem;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:rgba(255,255,255,0.65);margin-bottom:8px;
+}
+.form-input,.form-textarea,.form-select{
+  width:100%;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(184,134,11,0.25);
+  border-radius:6px;
+  padding:12px 16px;
+  font-family:'Lato',sans-serif;font-size:0.95rem;
+  color:#fff;
+  transition:border-color 0.2s;
+  outline:none;
+}
+.form-input::placeholder,.form-textarea::placeholder{color:rgba(255,255,255,0.35);}
+.form-input:focus,.form-textarea:focus{border-color:var(--gold);}
+.form-textarea{resize:vertical;min-height:100px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+
+/* ── FOOTER ───────────────────────────────────────────── */
+footer{
+  background:var(--text);
+  padding:3rem 5% 2rem;
+}
+.footer-inner{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:2fr 1fr 1fr;
+  gap:3rem;padding-bottom:2rem;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+.footer-brand-name{
+  font-family:'EB Garamond',serif;
+  font-size:1.8rem;font-weight:700;color:var(--saffron);
+  margin-bottom:6px;
+}
+.footer-brand-tag{
+  font-style:italic;color:var(--gold);
+  font-size:0.95rem;margin-bottom:1rem;
+}
+.footer-brand-desc{
+  font-size:0.85rem;line-height:1.75;
+  color:rgba(255,255,255,0.5);
+}
+.footer-col-title{
+  font-size:0.72rem;font-weight:700;
+  letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1rem;
+}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.footer-links a{
+  font-size:0.88rem;color:rgba(255,255,255,0.6);
+  text-decoration:none;transition:color 0.2s;
+}
+.footer-links a:hover{color:var(--gold);}
+.footer-bottom{
+  max-width:1200px;margin:0 auto;
+  padding-top:1.5rem;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1rem;
+}
+.footer-copy{
+  font-size:0.8rem;color:rgba(255,255,255,0.4);
+}
+.footer-affiliation{
+  font-size:0.8rem;color:rgba(255,255,255,0.55);
+}
+.footer-folk-bottom{
+  width:100%;height:8px;margin-top:1.5rem;
+  background:linear-gradient(90deg,
+    var(--saffron),var(--gold),var(--forest),var(--mauve),var(--saffron));
+}
+
+/* ── SCROLL ANIMATION ─────────────────────────────────── */
+.reveal{
+  opacity:0;transform:translateY(32px);
+  transition:opacity 0.7s ease,transform 0.7s ease;
+}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-delay-1{transition-delay:0.1s;}
+.reveal-delay-2{transition-delay:0.2s;}
+.reveal-delay-3{transition-delay:0.3s;}
+.reveal-delay-4{transition-delay:0.4s;}
+
+/* ── MOBILE HAMBURGER ─────────────────────────────────── */
+.hamburger{
+  display:none;flex-direction:column;gap:5px;
+  background:none;border:none;cursor:pointer;padding:4px;
+}
+.hamburger span{
+  display:block;width:24px;height:2px;
+  background:var(--saffron);border-radius:2px;
+  transition:all 0.3s;
+}
+
+/* ── BACK TO TOP ──────────────────────────────────────── */
+.back-top{
+  position:fixed;bottom:2rem;right:2rem;
+  width:44px;height:44px;border-radius:50%;
+  background:var(--saffron);color:#fff;
+  border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;z-index:99;
+  opacity:0;transform:translateY(12px);
+  transition:all 0.3s;
+  box-shadow:0 4px 16px rgba(201,75,26,0.35);
+}
+.back-top.visible{opacity:1;transform:translateY(0);}
+.back-top:hover{background:var(--saffron-dark);transform:translateY(-2px);}
+
+/* ── RESPONSIVE ───────────────────────────────────────── */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:auto;padding:5rem 5% 3rem;}
+  .hero-right{display:none;}
+  .about-grid{grid-template-columns:1fr;}
+  .chatbot-inner{grid-template-columns:1fr;}
+  .contact-inner{grid-template-columns:1fr;}
+  .footer-inner{grid-template-columns:1fr;}
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .form-row{grid-template-columns:1fr;}
+  .hero-stats{gap:1.5rem;}
+}
+@media(max-width:600px){
+  .nav-logo{font-size:1.3rem;}
+  .hero-stats{flex-direction:column;gap:1rem;}
+  .gi-grid{grid-template-columns:repeat(2,1fr);}
+  .research-cards{grid-template-columns:1fr;}
+}
+/* ── MEMORIAL TRIBUTE ─────────────────────────────────── */
+.memorial{
+  position:relative;
+  background:var(--navy);
+  padding:4.5rem 5%;
+  overflow:hidden;
+  text-align:center;
+}
+.memorial::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23B8860B' stroke-width='0.4' opacity='0.09'%3E%3Ccircle cx='60' cy='60' r='40'/%3E%3Ccircle cx='60' cy='60' r='28'/%3E%3Ccircle cx='60' cy='60' r='16'/%3E%3Cline x1='60' y1='0' x2='60' y2='120'/%3E%3Cline x1='0' y1='60' x2='120' y2='60'/%3E%3Cline x1='17' y1='17' x2='103' y2='103'/%3E%3Cline x1='103' y1='17' x2='17' y2='103'/%3E%3C/g%3E%3C/svg%3E");
+}
+.memorial-inner{
+  position:relative;z-index:1;
+  max-width:760px;margin:0 auto;
+}
+.memorial-diya{
+  font-size:2.8rem;
+  animation:diyaFlicker 3s ease-in-out infinite;
+  display:inline-block;margin-bottom:1rem;
+  filter:drop-shadow(0 0 12px rgba(184,134,11,0.6));
+}
+@keyframes diyaFlicker{
+  0%,100%{transform:scale(1) rotate(-2deg);filter:drop-shadow(0 0 12px rgba(184,134,11,0.6));}
+  25%{transform:scale(1.08) rotate(2deg);filter:drop-shadow(0 0 20px rgba(201,75,26,0.8));}
+  50%{transform:scale(0.96) rotate(-1deg);filter:drop-shadow(0 0 8px rgba(184,134,11,0.4));}
+  75%{transform:scale(1.04) rotate(1deg);filter:drop-shadow(0 0 16px rgba(184,134,11,0.7));}
+}
+.memorial-eyebrow{
+  font-size:0.7rem;font-weight:700;
+  letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1rem;
+  opacity:0.85;
+}
+.memorial-name{
+  font-family:'EB Garamond',serif;
+  font-size:clamp(1.8rem,3.5vw,2.6rem);
+  font-weight:700;
+  color:#fff;
+  line-height:1.25;
+  margin-bottom:0.5rem;
+}
+.memorial-name span{color:var(--gold);}
+.memorial-dates{
+  font-family:'EB Garamond',serif;
+  font-size:1rem;font-style:italic;
+  color:rgba(255,255,255,0.55);
+  margin-bottom:1.75rem;
+  letter-spacing:0.05em;
+}
+.memorial-divider{
+  display:flex;align-items:center;justify-content:center;
+  gap:16px;margin:0 auto 1.75rem;max-width:480px;
+}
+.memorial-divider::before,.memorial-divider::after{
+  content:'';flex:1;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(184,134,11,0.5),transparent);
+}
+.memorial-divider-icon{color:var(--gold);font-size:1rem;letter-spacing:6px;}
+.memorial-quote{
+  font-family:'EB Garamond',serif;
+  font-size:1.2rem;line-height:1.85;
+  font-style:italic;
+  color:rgba(255,255,255,0.82);
+  max-width:620px;margin:0 auto 1.5rem;
+}
+.memorial-quote strong{color:var(--gold);font-style:normal;}
+.memorial-dedication{
+  font-size:0.88rem;line-height:1.75;
+  color:rgba(255,255,255,0.55);
+  max-width:560px;margin:0 auto;
+}
+.memorial-lotus{
+  margin-top:2rem;
+  font-size:1.4rem;
+  letter-spacing:12px;
+  opacity:0.35;
+  color:var(--gold);
+}
+</style>
+</head>
+<body>
+
+<!-- Folk Top Band -->
+<div class="folk-top-band"></div>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Kala<span>Stree</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#tribute" style="color:var(--gold)">🪔 In Memory</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#gi-products">GI Products</a></li>
+      <li><a href="#chatbot">AI Chatbot</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Ticker -->
+<div class="ticker-bar" aria-hidden="true">
+  <div class="ticker-inner" id="ticker">
+    <span>Researcher</span><span class="dot">◆</span>
+    <span>PhD Scholar — IIT Patna</span><span class="dot">◆</span>
+    <span>GI Products Advocate</span><span class="dot">◆</span>
+    <span>Women Empowerment</span><span class="dot">◆</span>
+    <span>FinTech & Heritage</span><span class="dot">◆</span>
+    <span>KalaStree — Heritage by Her</span><span class="dot">◆</span>
+    <span>478 GI Tags Analyzed</span><span class="dot">◆</span>
+    <span>16 States Surveyed</span><span class="dot">◆</span>
+    <span>2,500 Women Voices</span><span class="dot">◆</span>
+    <span>Madhubani · Pashmina · Banarasi · Kanchipuram</span><span class="dot">◆</span>
+    <!-- duplicate for seamless loop -->
+    <span>Researcher</span><span class="dot">◆</span>
+    <span>PhD Scholar — IIT Patna</span><span class="dot">◆</span>
+    <span>GI Products Advocate</span><span class="dot">◆</span>
+    <span>Women Empowerment</span><span class="dot">◆</span>
+    <span>FinTech & Heritage</span><span class="dot">◆</span>
+    <span>KalaStree — Heritage by Her</span><span class="dot">◆</span>
+    <span>478 GI Tags Analyzed</span><span class="dot">◆</span>
+    <span>16 States Surveyed</span><span class="dot">◆</span>
+    <span>2,500 Women Voices</span><span class="dot">◆</span>
+    <span>Madhubani · Pashmina · Banarasi · Kanchipuram</span><span class="dot">◆</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg-art"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-left">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      PhD Research — ISMS 2025 · Springer LNNS
+    </div>
+    <h1 class="hero-title">KalaStree</h1>
+    <p class="hero-title-sub">"Heritage by Her"</p>
+    <p class="hero-desc">
+      I'm <strong>Garima Awasthi</strong> — PhD researcher, author, and women
+      empowerment advocate. My work connects India's GI-tagged artisan heritage with
+      FinTech, digital inclusion, and the hands that create it.
+    </p>
+    <div class="hero-ctas">
+      <a href="#research" class="btn-primary">Explore My Research →</a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num" data-target="478">0</div>
+        <div class="stat-lbl">GI Tags Analyzed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="2500">0</div>
+        <div class="stat-lbl">Women Surveyed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="16">0</div>
+        <div class="stat-lbl">States Covered</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="warli-frame">
+      <svg width="280" height="280" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Warli-style woman weaving illustration -->
+        <g fill="none" stroke="#B8860B" stroke-width="1.5" stroke-linecap="round">
+          <!-- body -->
+          <circle cx="140" cy="75" r="22" fill="#FDF6E3" stroke="#B8860B" stroke-width="2"/>
+          <!-- torso -->
+          <line x1="140" y1="97" x2="140" y2="165"/>
+          <!-- legs -->
+          <line x1="140" y1="165" x2="115" y2="210"/>
+          <line x1="140" y1="165" x2="165" y2="210"/>
+          <!-- arms weaving -->
+          <line x1="140" y1="115" x2="95" y2="140"/>
+          <line x1="140" y1="115" x2="185" y2="140"/>
+          <!-- loom lines -->
+          <rect x="70" y="125" width="140" height="80" rx="4" stroke="#C94B1A" stroke-width="1" fill="#FDF6E3" opacity="0.5"/>
+          <line x1="85" y1="130" x2="85" y2="200" stroke="#C94B1A" stroke-width="0.8"/>
+          <line x1="105" y1="130" x2="105" y2="200" stroke="#C94B1A" stroke-width="0.8"/>
+          <line x1="125" y1="130" x2="125" y2="200" stroke="#C94B1A" stroke-width="0.8"/>
+          <line x1="145" y1="130" x2="145" y2="200" stroke="#C94B1A" stroke-width="0.8"/>
+          <line x1="165" y1="130" x2="165" y2="200" stroke="#C94B1A" stroke-width="0.8"/>
+          <line x1="185" y1="130" x2="185" y2="200" stroke="#C94B1A" stroke-width="0.8"/>
+          <line x1="70" y1="145" x2="210" y2="145" stroke="#3B5A2F" stroke-width="1"/>
+          <line x1="70" y1="160" x2="210" y2="160" stroke="#3B5A2F" stroke-width="1"/>
+          <line x1="70" y1="175" x2="210" y2="175" stroke="#3B5A2F" stroke-width="1"/>
+          <line x1="70" y1="190" x2="210" y2="190" stroke="#3B5A2F" stroke-width="1"/>
+          <!-- decorative dots -->
+          <circle cx="50" cy="60" r="4" fill="#B8860B" opacity="0.4"/>
+          <circle cx="220" cy="55" r="5" fill="#C94B1A" opacity="0.4"/>
+          <circle cx="40" cy="200" r="3" fill="#3B5A2F" opacity="0.4"/>
+          <circle cx="235" cy="210" r="4" fill="#B8860B" opacity="0.4"/>
+          <!-- lotus at bottom -->
+          <ellipse cx="140" cy="240" rx="12" ry="6" fill="#C94B1A" opacity="0.3"/>
+          <ellipse cx="125" cy="237" rx="10" ry="5" fill="#B8860B" opacity="0.25" transform="rotate(-15 125 237)"/>
+          <ellipse cx="155" cy="237" rx="10" ry="5" fill="#B8860B" opacity="0.25" transform="rotate(15 155 237)"/>
+          <ellipse cx="140" cy="232" rx="10" ry="4" fill="#FDF6E3" stroke="#C94B1A" stroke-width="1" opacity="0.6"/>
+        </g>
+        <!-- border dots Warli style -->
+        <g fill="#B8860B" opacity="0.25">
+          <circle cx="25" cy="25" r="3"/><circle cx="255" cy="25" r="3"/>
+          <circle cx="25" cy="255" r="3"/><circle cx="255" cy="255" r="3"/>
+          <circle cx="140" cy="20" r="3"/><circle cx="140" cy="260" r="3"/>
+          <circle cx="20" cy="140" r="3"/><circle cx="260" cy="140" r="3"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section-fold" id="about">
+  <div class="section-inner">
+    <div class="sec-ornament"><div class="sec-ornament-inner">✦ ✧ ✦</div></div>
+    <div class="about-grid">
+      <div class="about-photo-wrap reveal">
+        <div class="about-photo-bg">
+          <div class="about-photo-placeholder">
+            📸 Add your photo here<br/><small style="font-size:0.75rem;opacity:0.7;">(Replace with your image)</small>
+          </div>
+        </div>
+        <div class="accent-tag">IIT Patna, 2025</div>
+      </div>
+      <div class="about-content reveal reveal-delay-2">
+        <p class="sec-eyebrow">About Me</p>
+        <h2 class="sec-title">I'm <span>Garima Awasthi</span></h2>
+        <p class="lead">"I believe the hands creating India's heritage deserve global recognition, financial independence, and access to modern digital tools."</p>
+        <p class="sec-body" style="margin-bottom:1rem;">I'm a PhD researcher, author, and women empowerment advocate passionate about preserving India's cultural heritage while creating economic opportunities for women through technology and innovation.</p>
+        <p class="sec-body">My research at the <strong>Department of Computer Science & Engineering, IIT Patna</strong> combines <strong>FinTech</strong>, <strong>women empowerment</strong>, and <strong>GI-tagged products</strong> to explore how traditional women artisans can grow in the digital economy — from Madhubani painters in Bihar to Pashmina weavers in Kashmir.</p>
+        <div class="about-tags">
+          <span class="tag tag-saffron">PhD Scholar</span>
+          <span class="tag tag-forest">IIT Patna</span>
+          <span class="tag tag-gold">FinTech Research</span>
+          <span class="tag tag-saffron">Women Empowerment</span>
+          <span class="tag tag-forest">GI Products</span>
+          <span class="tag">Springer Author</span>
+          <span class="tag tag-forest">CSE Department</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEMORIAL TRIBUTE -->
+<section class="memorial" id="tribute">
+  <div class="memorial-inner">
+    <div class="memorial-diya reveal">🪔</div>
+    <p class="memorial-eyebrow reveal">In Loving Memory</p>
+    <h2 class="memorial-name reveal">
+      Late Shri <span>S.B. Sharma</span>
+    </h2>
+    <p class="memorial-dates reveal reveal-delay-1">Forever in our hearts · Forever our guiding light</p>
+    <div class="memorial-divider reveal reveal-delay-1">
+      <div class="memorial-divider-icon">✦ ✦ ✦</div>
+    </div>
+    <p class="memorial-quote reveal reveal-delay-2">
+      "This research, this work, this entire journey of <strong>KalaStree</strong> is dedicated to you, Papa.
+      Every word I write, every woman's story I tell, every step I take —
+      I take it hoping you are watching, and that it makes you proud."
+    </p>
+    <p class="memorial-dedication reveal reveal-delay-3">
+      You believed in education, in dignity, and in the strength of women long before it was spoken about.
+      The values you lived by are the foundation of everything I do.
+      KalaStree carries your legacy — in every artisan's hand we empower,
+      in every heritage we protect, in every woman we help stand taller.
+      <br/><br/>
+      <em>— Garima, your daughter-in-law, with all her love.</em>
+    </p>
+    <div class="memorial-lotus reveal reveal-delay-4">🌸 🪷 🌸</div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section class="section-fold research-bg" id="research">
+  <div class="section-inner">
+    <div class="sec-ornament" style="--ornament-color:#B8860B;"><div class="sec-ornament-inner" style="color:#B8860B;">✦ ✧ ✦</div></div>
+    <p class="sec-eyebrow" style="text-align:center;">My Research Focus</p>
+    <h2 class="sec-title reveal" style="color:#fff;text-align:center;">Empowering Women Through<br/><span>GI Product Ecosystems</span></h2>
+    <p class="sec-body reveal" style="color:rgba(255,255,255,0.75);text-align:center;margin:0 auto 0;">
+      My research theme: <em>"Empowering Women with FinTech Access in GI-Tagged Product Ecosystems"</em> — exploring the digital-financial frontier for India's women artisans across 16 states.
+    </p>
+    <div class="research-cards">
+      <div class="r-card reveal reveal-delay-1">
+        <div class="r-card-icon">🌾</div>
+        <h3 class="r-card-title">GI Registry Analysis</h3>
+        <p class="r-card-body">Comprehensive analysis of 478 Geographical Indication tags registered from 2004–2023. Linear regression: GI_count = −1132.73 + 0.574 × Year (p&lt;0.001).</p>
+        <div class="r-card-stat"><span class="r-card-stat-num">478</span><span class="r-card-stat-label">GI Tags · 32 States</span></div>
+      </div>
+      <div class="r-card reveal reveal-delay-2">
+        <div class="r-card-icon">💸</div>
+        <h3 class="r-card-title">FinTech Adoption</h3>
+        <p class="r-card-body">Primary survey of 2,500 women across 16 states measuring UPI, AEPS, microloan apps, digital marketplace, insurtech, and digital bookkeeping adoption rates.</p>
+        <div class="r-card-stat"><span class="r-card-stat-num">0.527</span><span class="r-card-stat-label">Avg FinTech Index</span></div>
+      </div>
+      <div class="r-card reveal reveal-delay-3">
+        <div class="r-card-icon">🤝</div>
+        <h3 class="r-card-title">Women's Empowerment</h3>
+        <p class="r-card-body">Measuring empowerment through income control, household decision participation, mobility independence, and self-efficacy scores across GI value chains.</p>
+        <div class="r-card-stat"><span class="r-card-stat-num">0.393</span><span class="r-card-stat-label">Avg Empowerment Index</span></div>
+      </div>
+      <div class="r-card reveal reveal-delay-1">
+        <div class="r-card-icon">🏛️</div>
+        <h3 class="r-card-title">Policy & Barriers</h3>
+        <p class="r-card-body">Identification of 3 primary barriers: digital literacy (47.4%), trust &amp; fraud concerns (32.8%), device access (28.9%). Policy recommendations for SHG-led digital onboarding.</p>
+        <div class="r-card-stat"><span class="r-card-stat-num">3</span><span class="r-card-stat-label">Core Barrier Dimensions</span></div>
+      </div>
+      <div class="r-card reveal reveal-delay-2">
+        <div class="r-card-icon">🤖</div>
+        <h3 class="r-card-title">AI RAG System</h3>
+        <p class="r-card-body">Built a local Llama 3.1 + ChromaDB RAG system making PhD research queryable. 68 knowledge chunks · 815 lines · Zero cloud dependency. Presented at ISMS 2025.</p>
+        <div class="r-card-stat"><span class="r-card-stat-num">68</span><span class="r-card-stat-label">Knowledge Chunks</span></div>
+      </div>
+      <div class="r-card reveal reveal-delay-3">
+        <div class="r-card-icon">📊</div>
+        <h3 class="r-card-title">Multimodal Data</h3>
+        <p class="r-card-body">Integrated multimodal Excel reports combining survey data, GI registry, state-wise product galleries, analytics charts, and policy recommendations in one research artifact.</p>
+        <div class="r-card-stat"><span class="r-card-stat-num">2,500</span><span class="r-card-stat-label">Survey Respondents</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GI PRODUCTS GALLERY -->
+<section class="section-fold gallery-bg" id="gi-products">
+  <div class="section-inner">
+    <div class="sec-ornament"><div class="sec-ornament-inner">✦ ✧ ✦</div></div>
+    <p class="sec-eyebrow">India's GI Heritage</p>
+    <h2 class="sec-title reveal">Iconic <span>GI-Tagged Products</span><br/>Made by Women's Hands</h2>
+    <p class="sec-body reveal reveal-delay-1">From Darjeeling's misty tea gardens to the golden silk looms of Assam — these GI products carry centuries of women's knowledge and artistry.</p>
+    <div class="gi-grid">
+      <div class="gi-card reveal reveal-delay-1">
+        <div class="gi-card-img" style="background:linear-gradient(135deg,#E8F0E4,#C8DEC0)">🍵</div>
+        <div class="gi-card-info">
+          <div class="gi-card-name">Darjeeling Tea</div>
+          <div class="gi-card-state">West Bengal</div>
+          <div class="gi-card-badges"><span class="gi-badge gb-agri">Agricultural</span></div>
+          <div class="gi-card-year">📅 GI Year: 2004 · India's 1st GI Tag</div>
+        </div>
+      </div>
+      <div class="gi-card reveal reveal-delay-2">
+        <div class="gi-card-img" style="background:linear-gradient(135deg,#F5EBF0,#E8C8D8)">🧣</div>
+        <div class="gi-card-info">
+          <div class="gi-card-name">Kashmir Pashmina</div>
+          <div class="gi-card-state">Jammu & Kashmir</div>
+          <div class="gi-card-badges"><span class="gi-badge gb-textile">Textile</span></div>
+          <div class="gi-card-year">📅 GI Year: 2008</div>
+        </div>
+      </div>
+      <div class="gi-card reveal reveal-delay-3">
+        <div class="gi-card-img" style="background:linear-gradient(135deg,#FEF3E2,#F5D9A0)">🎨</div>
+        <div class="gi-card-info">
+          <div class="gi-card-name">Madhubani Painting</div>
+          <div class="gi-card-state">Bihar</div>
+          <div class="gi-card-badges"><span class="gi-badge gb-handi">Handicraft</span></div>
+          <div class="gi-card-year">📅 GI Year: 2007</div>
+        </div>
+      </div>
+      <div class="gi-card reveal reveal-delay-1">
+        <div class="gi-card-img" style="background:linear-gradient(135deg,#E8ECF2,#C0CDE0)">🥻</div>
+        <div class="gi-card-info">
+          <div class="gi-card-name">Banarasi Brocade &amp; Sarees</div>
+          <div class="gi-card-state">Uttar Pradesh</div>
+          <div class="gi-card-badges"><span class="gi-badge gb-textile">Textile</span></div>
+          <div class="gi-card-year">📅 GI Year: 2009</div>
+        </div>
+      </div>
+      <div class="gi-card reveal reveal-delay-2">
+        <div class="gi-card-img" style="background:linear-gradient(135deg,#FFF0E6,#F5C8A0)">🏺</div>
+        <div class="gi-card-info">
+          <div class="gi-card-name">Blue Pottery of Jaipur</div>
+          <div class="gi-card-state">Rajasthan</div>
+          <div class="gi-card-badges"><span class="gi-badge gb-handi">Handicraft</span></div>
+          <div class="gi-card-year">📅 GI Year: 2008</div>
+        </div>
+      </div>
+      <div class="gi-card reveal reveal-delay-3">
+        <div class="gi-card-img" style="background:linear-gradient(135deg,#E8F0E4,#A8C888)">🥭</div>
+        <div class="gi-card-info">
+          <div class="gi-card-name">Kanchipuram Silk Saree</div>
+          <div class="gi-card-state">Tamil Nadu</div>
+          <div class="gi-card-badges"><span class="gi-badge gb-textile">Textile</span></div>
+          <div class="gi-card-year">📅 GI Year: 2005</div>
+        </div>
+      </div>
+      <div class="gi-card reveal reveal-delay-1">
+        <div class="gi-card-img" style="background:linear-gradient(135deg,#FFF8E6,#EDD880)">✨</div>
+        <div class="gi-card-info">
+          <div class="gi-card-name">Muga Silk</div>
+          <div class="gi-card-state">Assam</div>
+          <div class="gi-card-badges"><span class="gi-badge gb-textile">Textile</span></div>
+          <div class="gi-card-year">📅 GI Year: 2007 · World's only golden silk</div>
+        </div>
+      </div>
+      <div class="gi-card reveal reveal-delay-2">
+        <div class="gi-card-img" style="background:linear-gradient(135deg,#E8ECF2,#B0C4E0)">🧵</div>
+        <div class="gi-card-info">
+          <div class="gi-card-name">Phulkari</div>
+          <div class="gi-card-state">Punjab</div>
+          <div class="gi-card-badges"><span class="gi-badge gb-handi">Handicraft</span></div>
+          <div class="gi-card-year">📅 GI Year: 2011</div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="#contact" class="btn-outline">View Full GI Registry →</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="section-fold" style="background:var(--cream);" id="data">
+  <div class="section-inner">
+    <p class="sec-eyebrow" style="text-align:center;">Research Data at a Glance</p>
+    <h2 class="sec-title reveal" style="text-align:center;">Numbers That Tell<br/><span>Her Story</span></h2>
+    <div class="stats-grid">
+      <div class="stat-card reveal reveal-delay-1" style="--clr:#C94B1A">
+        <div class="stat-card-num">478</div>
+        <div class="stat-card-label">GI Tags Documented</div>
+        <div class="stat-card-sub">From 2004 to 2023, across 32 States & UTs</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-2" style="--clr:#3B5A2F">
+        <div class="stat-card-num">2,500</div>
+        <div class="stat-card-label">Women Surveyed</div>
+        <div class="stat-card-sub">Primary data from 16 Indian states</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-3" style="--clr:#B8860B">
+        <div class="stat-card-num">53.5%</div>
+        <div class="stat-card-label">Work in GI Value Chains</div>
+        <div class="stat-card-sub">Agriculture, Textile, Handicraft & more</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-1" style="--clr:#7A3B52">
+        <div class="stat-card-num">0.527</div>
+        <div class="stat-card-label">Avg FinTech Index</div>
+        <div class="stat-card-sub">GI workers score 12–18% higher than non-GI</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-2" style="--clr:#1B2E4A">
+        <div class="stat-card-num">47.4%</div>
+        <div class="stat-card-label">Face Digital Literacy Gap</div>
+        <div class="stat-card-sub">#1 barrier to FinTech adoption</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-3" style="--clr:#C94B1A">
+        <div class="stat-card-num">815</div>
+        <div class="stat-card-label">Lines of AI Code</div>
+        <div class="stat-card-sub">RAG system — 100% local, zero cloud dependency</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI CHATBOT -->
+<section class="section-fold chatbot-bg" id="chatbot">
+  <div class="section-inner">
+    <div class="chatbot-inner">
+      <div class="reveal">
+        <div class="chatbot-tag">
+          <span class="chatbot-pulse"></span>
+          In Development — Coming Soon
+        </div>
+        <h2 class="chatbot-title">KalaStree<br/>GI Research AI Chatbot</h2>
+        <p class="chatbot-desc">A domain-specific RAG AI assistant trained exclusively on my PhD research data. Ask it anything about GI products, women's FinTech adoption, empowerment indices, or policy recommendations — and get grounded, cited answers.</p>
+        <p class="chatbot-desc"><strong>Built with:</strong> Llama 3.1 8B · ChromaDB · Ollama · Streamlit · 100% local · Zero hallucination</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="mailto:garima@kalastree.com?subject=KalaStree Chatbot Early Access" class="btn-primary" style="background:var(--navy);border-color:var(--navy);">Get Early Access →</a>
+          <a href="#contact" class="btn-outline" style="border-color:var(--navy);color:var(--navy);">Learn More</a>
+        </div>
+      </div>
+      <div class="chatbot-demo reveal reveal-delay-2">
+        <div class="chatbot-demo-header">
+          <div class="chatbot-demo-avatar">🌾</div>
+          <div>
+            <div class="chatbot-demo-name">KalaStree AI</div>
+            <div class="chatbot-demo-status">● Powered by Llama 3.1 + RAG</div>
+          </div>
+        </div>
+        <div class="chat-bubble chat-user">How many GI tags does India have?</div>
+        <div class="chat-bubble chat-bot">As of 2023, India has <strong style="color:var(--gold)">478 registered GI tags</strong> (2004–2023). Linear regression shows ~26 new tags per year (slope B1 = 0.574, p&lt;0.001). Top states: Tamil Nadu, Uttar Pradesh, Maharashtra.<br/><small style="opacity:0.7">Source: GI Registry · Springer Paper · Research Data</small></div>
+        <div class="chat-bubble chat-user">What barriers do women face?</div>
+        <div style="background:rgba(255,255,255,0.05);border-radius:10px;padding:6px 14px;border:1px solid rgba(184,134,11,0.2);display:inline-flex;">
+          <div class="chat-typing"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section class="section-fold" id="publications">
+  <div class="section-inner">
+    <div class="sec-ornament"><div class="sec-ornament-inner">✦ ✧ ✦</div></div>
+    <p class="sec-eyebrow">Research Publications</p>
+    <h2 class="sec-title reveal">Published <span>Work & Presentations</span></h2>
+    <div class="pub-list">
+      <div class="pub-item reveal reveal-delay-1">
+        <div class="pub-venue">Springer LNNS · ISMS 2025</div>
+        <div class="pub-title">Building a Domain-Specific AI Research Assistant Using Llama 3.1 & Retrieval-Augmented Generation (RAG)</div>
+        <div class="pub-meta">Garima Awasthi, Dr. Rajiv Misra, Dr. Nutan Kumar Tomar · IIT Patna · 2025<br/>A local RAG pipeline making PhD research on GI products and women empowerment queryable with zero cloud dependency.</div>
+      </div>
+      <div class="pub-item reveal reveal-delay-2">
+        <div class="pub-venue">Primary Research · 2024–25</div>
+        <div class="pub-title">Empowering Women with FinTech Access in GI-Tagged Product Ecosystems — A Survey of 2,500 Women across 16 Indian States</div>
+        <div class="pub-meta">Garima Awasthi · IIT Patna · Ongoing PhD Research<br/>Examining UPI, AEPS, microloan, marketplace and insurtech adoption among women artisans in GI value chains.</div>
+      </div>
+      <div class="pub-item reveal reveal-delay-3">
+        <div class="pub-venue">Conference Presentation</div>
+        <div class="pub-title">Multimodal Research Framework: Integrating Survey Data, GI Registry, and AI for Women's Empowerment Analysis</div>
+        <div class="pub-meta">Garima Awasthi · IIT Patna · 2025<br/>Presented at ISMS 2025 — combining CSV data, Excel multimodal reports, and RAG AI for comprehensive GI research.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section-fold contact-bg" id="contact">
+  <div class="section-inner">
+    <div class="contact-inner">
+      <div class="reveal">
+        <p class="sec-eyebrow">Get in Touch</p>
+        <h2 class="sec-title" style="color:#fff;">Research Enquiries,<br/><span>Collaborations & Press</span></h2>
+        <p style="font-size:1rem;line-height:1.8;color:rgba(255,255,255,0.7);margin:1rem 0 2.5rem;">Whether you're a researcher, journalist, NGO, policymaker, or craftsperson — I'd love to connect. Every conversation about women's heritage and digital empowerment matters.</p>
+        <div class="contact-info-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="contact-info-label">Email</div>
+            <div class="contact-info-value"><a href="mailto:garima@kalastree.com">garima@kalastree.com</a></div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon">🏛️</div>
+          <div>
+            <div class="contact-info-label">Institution</div>
+            <div class="contact-info-value">IIT Patna, Department of Computer Science & Engineering</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon">🌐</div>
+          <div>
+            <div class="contact-info-label">Website</div>
+            <div class="contact-info-value"><a href="https://www.kalastree.com">www.kalastree.com</a></div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon">💼</div>
+          <div>
+            <div class="contact-info-label">LinkedIn</div>
+            <div class="contact-info-value"><a href="https://www.linkedin.com/in/iammishu" target="_blank" rel="noopener">linkedin.com/in/iammishu</a></div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon">📖</div>
+          <div>
+            <div class="contact-info-label">Research Profile</div>
+            <div class="contact-info-value"><a href="#">Google Scholar</a> · <a href="#">ResearchGate</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form reveal reveal-delay-2">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="name">Your Name</label>
+            <input type="text" id="name" class="form-input" placeholder="Dr. / Ms. / Mr. ..."/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <input type="email" id="email" class="form-input" placeholder="you@organisation.com"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="org">Organisation / Institution</label>
+          <input type="text" id="org" class="form-input" placeholder="University / NGO / Media / Government ..."/>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="subject">Subject</label>
+          <input type="text" id="subject" class="form-input" placeholder="Research collaboration / Press inquiry / GI data / ..."/>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Message</label>
+          <textarea id="message" class="form-textarea" placeholder="Tell me about your interest in GI products, women empowerment, or FinTech research..."></textarea>
+        </div>
+        <button class="btn-primary" onclick="submitForm()" style="width:100%;justify-content:center;margin-top:0.5rem;">
+          Send Message →
+        </button>
+        <div id="form-success" style="display:none;margin-top:1rem;padding:12px;background:rgba(59,90,47,0.3);border:1px solid #3B5A2F;border-radius:6px;color:#90EE90;font-size:0.88rem;text-align:center;">
+          ✓ Message sent! I'll respond within 48 hours.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">KalaStree</div>
+      <div class="footer-brand-tag">"Heritage by Her"</div>
+      <p class="footer-brand-desc">PhD research bridging India's GI artisan heritage with FinTech, digital inclusion, and women's economic empowerment. IIT Patna · Dept. of CSE · Springer LNNS · ISMS 2025.</p>
+      <p style="margin-top:1rem;font-size:0.82rem;color:rgba(255,255,255,0.4);line-height:1.7;border-top:1px solid rgba(184,134,11,0.2);padding-top:1rem;">
+        🪔 <em>Dedicated to the memory of <strong style="color:var(--gold)">Late Shri S.B. Sharma</strong> — whose values light every step of this journey.</em>
+      </p>
+    </div>
+    <div>
+      <div class="footer-col-title">Quick Links</div>
+      <ul class="footer-links">
+        <li><a href="#about">About Garima</a></li>
+        <li><a href="#research">Research Focus</a></li>
+        <li><a href="#gi-products">GI Products</a></li>
+        <li><a href="#chatbot">AI Chatbot</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Research Profiles</div>
+      <ul class="footer-links">
+        <li><a href="#">Google Scholar</a></li>
+        <li><a href="#">ResearchGate</a></li>
+        <li><a href="https://www.linkedin.com/in/iammishu" target="_blank" rel="noopener">LinkedIn — iammishu</a></li>
+        <li><a href="#">IIT Patna Profile</a></li>
+        <li><a href="mailto:garima@kalastree.com">garima@kalastree.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Garima Awasthi · KalaStree.com · All Rights Reserved</div>
+    <div class="footer-affiliation">IIT Patna · Department of Computer Science & Engineering · PhD Scholar</div>
+  </div>
+  <div class="footer-folk-bottom"></div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<script>
+/* ── SCROLL REVEAL ─────────────────────── */
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+revealEls.forEach(el => observer.observe(el));
+
+/* ── COUNTER ANIMATION ─────────────────── */
+function animateCounter(el, target, duration = 1800) {
+  const start = performance.now();
+  const isFloat = target < 10 && target % 1 !== 0;
+  const update = now => {
+    const progress = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    const current = target * ease;
+    el.textContent = isFloat ? current.toFixed(3) : Math.round(current).toLocaleString();
+    if(progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+const counterObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      const target = parseFloat(e.target.dataset.target);
+      animateCounter(e.target, target);
+      counterObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el));
+
+/* ── BACK TO TOP ───────────────────────── */
+const backTop = document.getElementById('backTop');
+window.addEventListener('scroll', () => {
+  backTop.classList.toggle('visible', window.scrollY > 400);
+});
+
+/* ── MOBILE MENU ───────────────────────── */
+function toggleMenu() {
+  const links = document.querySelector('.nav-links');
+  if(links.style.display === 'flex') {
+    links.style.display = 'none';
+  } else {
+    links.style.cssText = 'display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:rgba(253,246,227,0.98);padding:1rem 5%;gap:1rem;border-bottom:1.5px solid #D9C9A8;z-index:99;';
+  }
+}
+
+/* ── CONTACT FORM ──────────────────────── */
+function submitForm() {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const msg = document.getElementById('message').value;
+  if(!name || !email || !msg) {
+    alert('Please fill in your name, email, and message.');
+    return;
+  }
+  const mailto = `mailto:garima@kalastree.com?subject=KalaStree Enquiry from ${encodeURIComponent(name)}&body=${encodeURIComponent(msg + '\n\nFrom: ' + name + '\nEmail: ' + email)}`;
+  window.location.href = mailto;
+  document.getElementById('form-success').style.display = 'block';
+}
+
+/* ── NAV ACTIVE STATE ──────────────────── */
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if(window.scrollY >= s.offsetTop - 100) current = s.id;
+  });
+  navLinks.forEach(a => {
+    a.style.color = a.getAttribute('href') === '#'+current ? 'var(--saffron)' : '';
+  });
+}, { passive: true });
+
+/* ── SMOOTH CLOSE MOBILE NAV ON LINK CLICK ── */
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    const links = document.querySelector('.nav-links');
+    if(window.innerWidth <= 900) links.style.display = 'none';
+  });
+});
+</script>
+</body>
+</html>
